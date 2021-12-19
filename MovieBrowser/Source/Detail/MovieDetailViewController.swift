@@ -20,7 +20,7 @@ class MovieDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         movieLabelTitle.text = movieData.title
-        releaseDateTitle.text = "Release Date: "+formatdate()
+        releaseDateTitle.text = "Release Date: \(Utilities().formatDate(dateString: movieData.release_date ?? ""))"
         pictureDescription.text = movieData.overview
         network.fetchImage(imagePath: movieData.poster_path ?? "") { (response) in
             print(response)
@@ -28,13 +28,5 @@ class MovieDetailViewController: UIViewController {
                 self.pictureImage.image = response
             }
         }
-    }
-    
-    func formatdate() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let s = dateFormatter.date(from: movieData.release_date ?? "")
-        dateFormatter.dateFormat = "MM/dd/yy"
-        return dateFormatter.string(from: s!)
     }
 }

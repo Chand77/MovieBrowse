@@ -11,16 +11,16 @@ import UIKit
 class Network {
     static let shared = Network()
     private init(){}
-    let apiKey = "5885c445eab51c7004916b9c0313e2d3"
-    
+    let apiKey = Constants.apiKey
+// Fetch Movie details
     func fetchMoviesData(search: String,
                          onCompletion : @escaping ([MovieData]) -> Void) {
-        //let searchKey = search.replacingOccurrences(of: "", with: "%20")
+
         guard let url = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(search)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "") else {
                    return
                }
         var request = URLRequest(url: url)
-               request.httpMethod = "GET"
+        request.httpMethod = Constants.getString
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error == nil {
                 let decoder = JSONDecoder()
@@ -40,13 +40,13 @@ class Network {
              task.resume()
          }
     
-    
+// Fetch image for selected movie
     func fetchImage(imagePath: String, onCompletion : @escaping (UIImage) -> Void) {
         guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(imagePath)") else {
                    return
                }
         var request = URLRequest(url: url)
-               request.httpMethod = "GET"
+               request.httpMethod = Constants.getString
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error == nil {
                 if let responseData = data {

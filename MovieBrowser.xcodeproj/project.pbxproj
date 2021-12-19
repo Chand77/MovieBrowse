@@ -16,6 +16,8 @@
 		93BB63A42513DEEF00837DF4 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BB63A32513DEEF00837DF4 /* Network.swift */; };
 		93C5866325E9F01B00DBCE60 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5866225E9F01B00DBCE60 /* MovieDetailViewController.swift */; };
 		93FE107325E056D100F805CE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FE107225E056D100F805CE /* SearchViewController.swift */; };
+		9D7A49E3276F015F00B11E70 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A49E2276F015F00B11E70 /* Utilities.swift */; };
+		9D7A49E6276F0CBB00B11E70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7A49E5276F0CBB00B11E70 /* Constants.swift */; };
 		AF1165D9276D0D15001A2659 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1165D8276D0D15001A2659 /* MovieTableViewCell.xib */; };
 		AF1165DD276D0D6A001A2659 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1165DC276D0D6A001A2659 /* MovieTableViewCell.swift */; };
 		AF1165E1276D1DA4001A2659 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1165E0276D1DA4001A2659 /* MovieModel.swift */; };
@@ -45,6 +47,8 @@
 		93BB63A32513DEEF00837DF4 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		93C5866225E9F01B00DBCE60 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		93FE107225E056D100F805CE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9D7A49E2276F015F00B11E70 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9D7A49E5276F0CBB00B11E70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF1165D8276D0D15001A2659 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		AF1165DC276D0D6A001A2659 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		AF1165E0276D1DA4001A2659 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 		93FE106D25E0557B00F805CE /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				9D7A49E4276F0B1900B11E70 /* Constants */,
+				9D7A49E1276F011100B11E70 /* Utilities */,
 				AF1165CB276D086A001A2659 /* CustomCell */,
 				93FE106C25E0556500F805CE /* App */,
 				93FE107125E056C300F805CE /* Search */,
@@ -167,6 +173,22 @@
 				93FE107225E056D100F805CE /* SearchViewController.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		9D7A49E1276F011100B11E70 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9D7A49E2276F015F00B11E70 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9D7A49E4276F0B1900B11E70 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9D7A49E5276F0CBB00B11E70 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		AF1165CB276D086A001A2659 /* CustomCell */ = {
@@ -286,7 +308,9 @@
 				AF1165DD276D0D6A001A2659 /* MovieTableViewCell.swift in Sources */,
 				93BB63A42513DEEF00837DF4 /* Network.swift in Sources */,
 				93305A752513D043004E869A /* SceneDelegate.swift in Sources */,
+				9D7A49E3276F015F00B11E70 /* Utilities.swift in Sources */,
 				93C5866325E9F01B00DBCE60 /* MovieDetailViewController.swift in Sources */,
+				9D7A49E6276F0CBB00B11E70 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
